@@ -411,3 +411,31 @@
     background-color: #28D2D1
 
 
+$bg-color: #377dff
+
+.services-wrapper
+  width: 100%
+  background-color: $bg-color
+  padding: 3%
+  color: white
+  display: flex
+  justify-content: center
+
+.services-container
+  max-width: 90%
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 10px
+
+  .services-header
+    grid-column: 1 / 4
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .service-card
+    border-radius: 8px
+    background-color: white
+    padding: 8%
+    color: black

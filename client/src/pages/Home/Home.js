@@ -54,6 +54,38 @@ const Home = (props) => {
                 carouselType={carouselConstants.MAIN_SLIDER}
               />
             </div>
+            <div className={styles['services-wrapper']}>
+                <div className={styles['services-container']}>  
+                    <div className={styles['services-header']}>
+                      <h2>All Branding Agency Services</h2>
+                      <p>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </div>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                    <article className={styles['service-card']}>
+                      <h3>Lorem ipsum</h3>
+                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                    </article>
+                </div>
+            </div>
             <div className={styles.container__description}>
               <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
               <div className={styles.cardContainer}>
