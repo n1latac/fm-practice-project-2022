@@ -1,109 +1,104 @@
 import React, {useState} from 'react';
+import styles from './PricingPage.module.css' ;
+import PricingStatus from '../../components/PricingStatus';
 import Header from '../../components/Header/Header';
-import PricingBox from '../../components/PricingBox';
-import styles from './PricingPage.module.css';
 
-const PricingPage = () => {
-  const [selectText, setSelect] = useState('Name');
+const Pricing = (props) => {
+  const [select, setSelect] = useState('Name');
 
-const changeSelect = ({target: {value}}) => {
+  const changeSelect = ({target: {value}}) => {
     setSelect(value);
-}
+  }
 
-    return (
-        <>
-        <Header />
-        <main className={styles['main-container']}>
-          <section className={styles['pricing-header']}>
-            <div className={styles['header']}>
-              Pricing for 
-              <div className={styles['custom-select']}>{selectText}
-                <select name="pricing-select" onChange={changeSelect}>
-                  <option value="Name">Name</option>
-                  <option value="Logo">Logo</option>
-                  <option value="Tagline">Tagline</option>
-                  <option value="Name and Logo">Name and Logo</option>
-                </select>
-              </div>
+
+  return (
+    <>
+    <Header/>
+    <div className={styles.wrapper}>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <div className={styles[`header-first`]}>
+            <span className={styles[`header-span`]}>Pricing for</span>
+            <div className={styles[`header-select`]}>{select}
+              <select name='pricing-select' onChange={changeSelect}>
+                <option value='Name'>Name</option>
+                <option value='Logo'>Logo</option>
+                <option value='Tagline'>Tagline</option>
+              </select>
             </div>
-            <img src='https://i.vimeocdn.com/video/890316322-67433145dfd7469eea8103ce38a934f49d8989b041effa97f4eb5c7e63ef753e-d_640'/>
-          </section>
-          <section className={styles['box-container']}>
-            <PricingBox boxText={{
-                  header: 'Bronze',
-                  descr: 'Branding on a budget',
-                  price: 299,
-                  }}
-                  color="#e0b48d">
-                <p>Prize to Winner - $135 (Included)</p>
-                <p> Validation Services & Upgrades ($39 value)</p>
-                <ul>
-                  <li>Matching .com URL</li>
-                </ul>
-                <p>Expected 300+ Entries</p>
-
-              </PricingBox>
-              <PricingBox boxText={{
-                  header: 'Gold',
-                  descr: 'Increase participation and basic brand validation',
-                  price: 449,
-                  }}
-                  color="#e8b954">
-                <p>Prize to Winner - $200 (Included)</p>
-                <p> Validation Services & Upgrades ($305 value)</p>
-                <ul>
-                  <li>Matching .com URL</li>
-                  <li> Instant Trademark Check (One Database)</li>
+          </div>
+          <div>
+            <img src='./staticImages/squadhelp.png'></img>
+          </div>
+        </div>
+        <div className={styles[`pricing-status`]}>
+        <PricingStatus
+          name='Bronze'
+          underName='Branding on a budget'
+          cost='US$349'
+          color='#e0b48c'
+          >
+            <ul>
+              <li>Prize to Winner - $135 (Included)</li>
+              <li>Expected 30+ Entries</li>
+            </ul>
+        </PricingStatus>
+        <PricingStatus
+          name='Gold'
+          underName='Increase participation and basic brand validation'
+          cost='US$499'
+          color='#e8b954'
+          >
+            <ul>
+              <li>Prize to Winner - $225 (Included)</li>
+              <li>
+                Validation Services & Upgrades ($267 value)
+                <ul className={styles.checkAdd}>
                   <li>NDA and More Privacy</li>
                   <li>Project Promotion (Basic)</li>
-                  <li>Comprehensive Trademark Research</li>
                 </ul>
-                <p>Expected 600+ Entries</p>
-                <p>Partial Refund Option</p>
-              </PricingBox>
-              <PricingBox boxText={{
-                  header: 'Platinum',
-                  descr: 'Work with top-level creatives, plus agency-style brand validation',
-                  price: 749,
-                  }}
-                  color="#555">
-                <p>Prize to Winner - $300 (Included)</p>
-                <p> Validation Services & Upgrades ($979 value)</p>
-                <ul>
-                  <li>Matching .com URL</li>
-                  <li> Instant Trademark Check (One Database)</li>
-                  <li>NDA and More Privacy</li>
-                  <li>Project Promotion (Basic)</li>
-                  <li>Comprehensive Trademark Research</li>
-                </ul>
-                <p>Expected 1000+ Entries</p>
-              </PricingBox>
-              <PricingBox boxText={{
-                  header: 'Managed',
-                  descr: 'A full agency experience without the agency price tag',
-                  price: 1499,
-                  }}
-                  color="#28d2d0">
-                <p>Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant.</p>
-                <p>With significantly more validation services, professional brief creation, and daily management of your contest by your Branding Expert, you'll receive an enhanced branding experience to closeout your branding project.</p>
-                <p>Learn More about Managed Contest Service</p>
-
-              </PricingBox>
-          </section>
-          <section>
-            <p>All packages include the award amount</p>
-            <p>  for the winning creative and all fees and commissions.</p>
-              <button className={styles['get-started']}>Get started now</button>
-          </section>
-        </main>
-        </>
-    );
+              </li>
+              <li>Expected 50+ Entries</li>
+              <li>Partial Refund Option</li>
+            </ul>
+          </PricingStatus>
+          <PricingStatus
+            name='Platinum'
+            underName='Work with top-level creatives, plus agency-style brand validation'
+            cost='US$799'
+            color='#555'
+          >
+              <ul>
+                <li>Prize to Winner - $300 (Included)</li>
+                <li>
+                  Validation Services & Upgrades ($644 value)
+                  <ul className={styles.checkAdd}>
+                    <li> Audience Testing View Sample Report</li>
+                    <li> Tier A Creatives</li>
+                    <li>NDA and More Privacy</li>
+                    <li>Enhanced Project Promotion</li>
+                    <li>Team Collaboration Tools</li>
+                  </ul>
+                </li>
+                <li>Expected 60+ Entries</li>
+                <li>Partial Refund Option</li>
+              </ul>
+          </PricingStatus>
+          <PricingStatus
+            name='Managed'
+            underName='A full agency experience without the agency price tag'
+            cost='US$1599'
+            color='#28d2d0'
+          >
+              <ul>
+                <li>Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant.With significantly more validation services, professional brief creation, and daily management of your contest by your Branding Expert, you'll receive an enhanced branding experience to closeout your branding project.Learn More about Managed Contest Service</li>
+              </ul>
+          </PricingStatus>
+        </div>
+      </div>
+    </div>
+    </>
+  );
 }
 
-export default PricingPage;
-
-/*
-
-
-
-*/
+export default Pricing;

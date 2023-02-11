@@ -413,29 +413,71 @@
 
 $bg-color: #377dff
 
-.services-wrapper
+.service-block
+  background-color: #377dff
   width: 100%
-  background-color: $bg-color
-  padding: 3%
-  color: white
-  display: flex
-  justify-content: center
 
-.services-container
-  max-width: 90%
-  display: grid
-  grid-template-columns: repeat(3, 1fr)
-  gap: 10px
-
-  .services-header
-    grid-column: 1 / 4
+  .service-content
     display: flex
     flex-direction: column
-    justify-content: center
     align-items: center
 
-  .service-card
-    border-radius: 8px
-    background-color: white
-    padding: 8%
-    color: black
+    .service-article
+      color: white
+  
+  .service-main 
+    width: 80%
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+
+    .service-card
+      background-color: white
+      margin: 20px
+      
+      a
+        text-decoration: none
+
+        h3
+          color: black
+          padding: 20px
+
+          img
+            width: 16px
+            height: 16px
+            margin-right: 10px
+        p 
+          color: #8c968f
+          font-size: 12px
+          padding: 0px 20px 20px 20px
+
+    
+.upperFooter
+  width: 100%
+  height: 80vh
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .explanations
+    width: 60%
+    display: flex 
+    flex-direction: row
+    justify-content: center 
+    border: 1px solid black
+    padding: 40px 30px   
+
+    h2
+      font-size: 25px
+
+    .arrow::before
+      content: '\279C'
+    
+    div
+      h2 
+        font-size: 20px
+        padding-bottom: 20px
+      div
+        padding-bottom: 20px
+          
+
+

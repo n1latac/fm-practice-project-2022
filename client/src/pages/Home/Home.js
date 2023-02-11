@@ -54,37 +54,69 @@ const Home = (props) => {
                 carouselType={carouselConstants.MAIN_SLIDER}
               />
             </div>
-            <div className={styles['services-wrapper']}>
-                <div className={styles['services-container']}>  
-                    <div className={styles['services-header']}>
-                      <h2>All Branding Agency Services</h2>
-                      <p>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </div>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
-                    <article className={styles['service-card']}>
-                      <h3>Lorem ipsum</h3>
-                      <p><i className="fas fa-star"></i>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
-                    </article>
+            <div className={styles['service-block']}>
+              <div className={styles[`service-content`]}>
+                <article className={styles[`service-article`]}>
+                  <h2>All Branding Agency Services</h2>
+                  <p>Let our Squad of 250K+ experts from around the world help you launch your brand!</p>
+                </article>
+                <div className={styles[`service-main`]}>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./staticImages/star.png'/>Premium Domains</h3>
+                      <p>Curated brandable domains available for immediate purchase</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./free-icon-group-6229810.png' style={{width: '23px', height: '23px'}}/>Naming Contests</h3>
+                      <p>Crowdsourced Name ideas from our creative community</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./businessman.png'/>Managed Contests</h3>
+                      <p>Full Agency-level Experience, led by Branding Consultant</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./copy.png'/>Logo Contests</h3>
+                      <p>Professioanal logo design contests</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./chat.png'/>Tagline Contests</h3>
+                      <p>Taglines, slogan, and strapline ideas from our creative community</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./video-camera.png'/>Video Creation</h3>
+                      <p>Get perfectly branded videos optimized for results</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./statistic.png'/>Audience Testing</h3>
+                      <p>Fast, effective naming and branding research with consumer test panels</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./shopping-list.png'/>Trademark Research</h3>
+                      <p>Comprehensive Trademark Research across 100+ countries</p>
+                    </a>
+                  </div>
+                  <div className={styles[`service-card`]}>
+                    <a href='#'>
+                      <h3><img src='./letter-c.png'/>Trademark Filling</h3>
+                      <p>Trademark filling service by Licensed Trademark attorneys</p>
+                    </a>
+                  </div>
                 </div>
+              </div>
             </div>
             <div className={styles.container__description}>
               <h2 className={styles.blueUnderline}>Why Squadhelp?</h2>
@@ -244,6 +276,34 @@ const Home = (props) => {
                 images={carouselConstants.feedbackSliderImages}
                 carouselType={carouselConstants.FEEDBACK_SLIDER}
               />
+            </div>
+          </div>
+          <div className={styles.upperFooter}>
+            <div className={styles.explanations}>
+              <div className={styles.whySquadhelp}>
+                <div>
+                  <h2>Why Squadhelp?</h2>
+                  <div>
+                    <h3 className={styles.arrow}>Disrupting The Traditional Agency Model</h3>
+                    <p>Squadhelp is reimagining how naming is done, providing fast, affordable, high-quality, soup-to-nuts solutions unlike anyone else.</p>
+                  </div>
+                  <div>
+                    <h3 className={styles.arrow}>Satisfaction Guarantee</h3>
+                    <p>We have policies in place to ensure that you are satisfied with your experience.</p>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.questions}>
+                <div>
+                  <article>
+                    <h2>Questions?</h2>
+                    <p>Speak with a Squadhelp platform expert to learn more and get your questions answered.</p>
+                  </article>
+                  <button>Schedule Consulation</button>
+                  <p>(877) 355-3585</p>
+                  <p>Call us for assistance</p>
+                </div>
+              </div>
             </div>
           </div>
           <Footer />
